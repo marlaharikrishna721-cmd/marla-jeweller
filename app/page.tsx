@@ -14,13 +14,16 @@ export default function Home() {
 
   return (
     <main className="min-h-screen luxury-bg text-white">
-      <header className="bg-black text-white sticky top-0 z-50 border-b border-yellow-600">
+
+      <header className="bg-black sticky top-0 z-50 border-b border-yellow-600">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
           <h1 className="text-xl md:text-2xl font-bold gold-text">
             MARLA PREMIUM JEWELLER
           </h1>
 
           <div className="flex gap-3">
+
             <Link
               href="/cart"
               className="gold-button px-4 py-2 rounded-lg font-bold"
@@ -35,11 +38,14 @@ export default function Home() {
             >
               WhatsApp
             </a>
+
           </div>
+
         </div>
       </header>
 
       <section className="text-center py-16 px-6">
+
         <h2 className="text-4xl md:text-5xl font-bold gold-text">
           Premium Fashion Jewellery
         </h2>
@@ -53,8 +59,10 @@ export default function Home() {
         </p>
 
         <p className="mt-2 text-yellow-100">
-          J-165 Durga Bhavani Nagar, Jubilee Hills,
-          Hyderabad, Telangana
+          J-165 Durga Bhavani Nagar,
+          Jubilee Hills,
+          Hyderabad,
+          Telangana
         </p>
 
         <a
@@ -64,14 +72,17 @@ export default function Home() {
         >
           Order On WhatsApp
         </a>
+
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-12">
+
         <h2 className="text-3xl font-bold text-center mb-10 gold-text">
           Shop By Category
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
           <Link
             href="/earrings"
             className="gold-card rounded-xl shadow overflow-hidden hover:scale-105 transition"
@@ -85,8 +96,11 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
+
             <div className="p-4 text-center">
-              <h3 className="text-xl font-bold gold-text">💎 Earrings</h3>
+              <h3 className="text-xl font-bold gold-text">
+                💎 Earrings
+              </h3>
             </div>
           </Link>
 
@@ -102,8 +116,11 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
+
             <div className="p-4 text-center">
-              <h3 className="text-xl font-bold gold-text">💍 Rings</h3>
+              <h3 className="text-xl font-bold gold-text">
+                💍 Rings
+              </h3>
             </div>
           </Link>
 
@@ -119,8 +136,11 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
+
             <div className="p-4 text-center">
-              <h3 className="text-xl font-bold gold-text">📿 Necklaces</h3>
+              <h3 className="text-xl font-bold gold-text">
+                📿 Necklaces
+              </h3>
             </div>
           </Link>
 
@@ -136,33 +156,58 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
+
             <div className="p-4 text-center">
-              <h3 className="text-xl font-bold gold-text">✨ Bracelets</h3>
+              <h3 className="text-xl font-bold gold-text">
+                ✨ Bracelets
+              </h3>
             </div>
           </Link>
+
         </div>
+
       </section>
 
       <section className="py-12 border-t border-yellow-700">
+
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center px-6">
+
           <div className="gold-card p-6 rounded-xl">
-            <h3 className="font-bold text-xl gold-text">🚚 Fast Delivery</h3>
-            <p className="mt-2 text-yellow-100">Quick shipping across India</p>
+            <h3 className="font-bold text-xl gold-text">
+              🚚 Fast Delivery
+            </h3>
+
+            <p className="mt-2 text-yellow-100">
+              Quick shipping across India
+            </p>
           </div>
 
           <div className="gold-card p-6 rounded-xl">
-            <h3 className="font-bold text-xl gold-text">💎 Premium Quality</h3>
-            <p className="mt-2 text-yellow-100">High quality fashion jewellery</p>
+            <h3 className="font-bold text-xl gold-text">
+              💎 Premium Quality
+            </h3>
+
+            <p className="mt-2 text-yellow-100">
+              High quality fashion jewellery
+            </p>
           </div>
 
           <div className="gold-card p-6 rounded-xl">
-            <h3 className="font-bold text-xl gold-text">📞 Customer Support</h3>
-            <p className="mt-2 text-yellow-100">Direct WhatsApp assistance</p>
+            <h3 className="font-bold text-xl gold-text">
+              📞 Customer Support
+            </h3>
+
+            <p className="mt-2 text-yellow-100">
+              Direct WhatsApp assistance
+            </p>
           </div>
+
         </div>
+
       </section>
 
       <footer className="bg-black text-center py-6 border-t border-yellow-600">
+
         <h3 className="font-bold text-lg gold-text">
           MARLA PREMIUM JEWELLER
         </h3>
@@ -174,7 +219,9 @@ export default function Home() {
         <p className="mt-1 text-yellow-100">
           Hyderabad, Telangana
         </p>
+
       </footer>
+
     </main>
   );
 }
