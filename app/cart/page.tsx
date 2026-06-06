@@ -44,7 +44,11 @@ ${cart
   .join("\n")}
 
 Total Items: ${totalItems}
-Grand Total: ₹${total}`
+Grand Total: ₹${total}
+
+Payment:
+I will pay / paid using UPI ID: Hari95425@ybl
+I will send payment screenshot here.`
   );
 
   return (
@@ -133,6 +137,17 @@ Grand Total: ₹${total}`
 
             <div className="bg-white p-6 rounded-xl shadow mt-6">
               <h2 className="text-2xl font-bold">Grand Total: ₹{total}</h2>
+
+              <div className="mt-5 border rounded-lg p-4 bg-gray-50">
+                <h3 className="font-bold text-lg">Pay Using UPI</h3>
+                <p className="mt-2">
+                  UPI ID: <span className="font-bold">Hari95425@ybl</span>
+                </p>
+                <p className="text-sm text-gray-600 mt-2">
+                  After payment, click Place Order On WhatsApp and send your
+                  payment screenshot.
+                </p>
+              </div>
 
               <div className="mt-6 space-y-3">
                 <input
