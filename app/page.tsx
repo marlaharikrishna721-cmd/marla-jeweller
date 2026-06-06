@@ -13,7 +13,7 @@ export default function Home() {
   );
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 text-black">
 
       {/* HEADER */}
       <header className="bg-black text-white sticky top-0 z-50">
@@ -52,7 +52,7 @@ export default function Home() {
           Premium Fashion Jewellery
         </h2>
 
-        <p className="mt-4 text-gray-600 text-black">
+        <p className="mt-4 text-gray-800">
           Stylish Jewellery from ₹50 to ₹1500
         </p>
 
@@ -60,7 +60,7 @@ export default function Home() {
           📞 9542511721
         </p>
 
-        <p className="mt-2 text-gray-600">
+        <p className="mt-2 text-gray-800">
           J-165 Durga Bhavani Nagar, Jubilee Hills,
           Hyderabad, Telangana
         </p>
@@ -178,7 +178,7 @@ export default function Home() {
             <h3 className="font-bold text-xl">
               🚚 Fast Delivery
             </h3>
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-gray-800">
               Quick shipping across India
             </p>
           </div>
@@ -187,7 +187,7 @@ export default function Home() {
             <h3 className="font-bold text-xl">
               💎 Premium Quality
             </h3>
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-gray-800">
               High quality fashion jewellery
             </p>
           </div>
@@ -196,7 +196,7 @@ export default function Home() {
             <h3 className="font-bold text-xl">
               📞 Customer Support
             </h3>
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-gray-800">
               Direct WhatsApp assistance
             </p>
           </div>
