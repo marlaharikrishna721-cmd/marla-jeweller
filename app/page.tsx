@@ -14,20 +14,16 @@ export default function Home() {
 
   return (
     <main className="min-h-screen luxury-bg text-white">
-
-      {/* HEADER */}
-      <header className="bg-black text-white sticky top-0 z-50">
+      <header className="bg-black text-white sticky top-0 z-50 border-b border-yellow-600">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
-          <h1 className="text-xl md:text-2xl font-bold">
+          <h1 className="text-xl md:text-2xl font-bold gold-text">
             MARLA PREMIUM JEWELLER
           </h1>
 
           <div className="flex gap-3">
-
             <Link
               href="/cart"
-              className="gold-card rounded-xl shadow px-4 py-2 rounded-lg font-bold"
+              className="gold-button px-4 py-2 rounded-lg font-bold"
             >
               🛒 Cart ({cartCount})
             </Link>
@@ -35,32 +31,28 @@ export default function Home() {
             <a
               href="https://wa.me/919542511721"
               target="_blank"
-              className="gold-card rounded-xl shadow px-4 py-2 rounded-lg"
+              className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold"
             >
               WhatsApp
             </a>
-
           </div>
-
         </div>
       </header>
 
-      {/* HERO */}
       <section className="text-center py-16 px-6">
-
-        <h2 className="text-4xl md:text-5xl font-bold text-black">
+        <h2 className="text-4xl md:text-5xl font-bold gold-text">
           Premium Fashion Jewellery
         </h2>
 
-        <p className="mt-4 text-gray-800">
+        <p className="mt-4 text-yellow-100">
           Stylish Jewellery from ₹50 to ₹1500
         </p>
 
-        <p className="mt-4 font-semibold text-black">
+        <p className="mt-4 font-semibold gold-text">
           📞 9542511721
         </p>
 
-        <p className="mt-2 text-gray-800">
+        <p className="mt-2 text-yellow-100">
           J-165 Durga Bhavani Nagar, Jubilee Hills,
           Hyderabad, Telangana
         </p>
@@ -68,25 +60,21 @@ export default function Home() {
         <a
           href="https://wa.me/919542511721"
           target="_blank"
-          className="inline-block mt-6 bg-green-500 text-white px-6 py-3 rounded-lg"
+          className="inline-block mt-6 gold-button px-6 py-3 rounded-lg"
         >
           Order On WhatsApp
         </a>
-
       </section>
 
-      {/* CATEGORIES */}
       <section className="max-w-7xl mx-auto px-6 py-12">
-
-        <h2 className="text-3xl font-bold text-center mb-10 text-black">
+        <h2 className="text-3xl font-bold text-center mb-10 gold-text">
           Shop By Category
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-black">
-
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <Link
             href="/earrings"
-            className="bg-white rounded-xl shadow overflow-hidden hover:shadow-xl transition"
+            className="gold-card rounded-xl shadow overflow-hidden hover:scale-105 transition"
           >
             <div className="relative h-64">
               <Image
@@ -97,17 +85,14 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-
-            <div className="p-4 text-center text-black">
-              <h3 className="text-xl font-bold">
-                💎 Earrings
-              </h3>
+            <div className="p-4 text-center">
+              <h3 className="text-xl font-bold gold-text">💎 Earrings</h3>
             </div>
           </Link>
 
           <Link
             href="/rings"
-            className="bg-white rounded-xl shadow overflow-hidden hover:shadow-xl transition"
+            className="gold-card rounded-xl shadow overflow-hidden hover:scale-105 transition"
           >
             <div className="relative h-64">
               <Image
@@ -117,17 +102,14 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-
             <div className="p-4 text-center">
-              <h3 className="text-xl font-bold text-black">
-                💍 Rings
-              </h3>
+              <h3 className="text-xl font-bold gold-text">💍 Rings</h3>
             </div>
           </Link>
 
           <Link
             href="/necklaces"
-            className="bg-white rounded-xl shadow overflow-hidden hover:shadow-xl transition"
+            className="gold-card rounded-xl shadow overflow-hidden hover:scale-105 transition"
           >
             <div className="relative h-64">
               <Image
@@ -137,17 +119,14 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-
             <div className="p-4 text-center">
-              <h3 className="text-xl font-bold text-black">
-                📿 Necklaces
-              </h3>
+              <h3 className="text-xl font-bold gold-text">📿 Necklaces</h3>
             </div>
           </Link>
 
           <Link
             href="/bracelets"
-            className="bg-white rounded-xl shadow overflow-hidden hover:shadow-xl transition"
+            className="gold-card rounded-xl shadow overflow-hidden hover:scale-105 transition"
           >
             <div className="relative h-64">
               <Image
@@ -157,71 +136,45 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-
             <div className="p-4 text-center">
-              <h3 className="text-xl font-bold text-black">
-                ✨ Bracelets
-              </h3>
+              <h3 className="text-xl font-bold gold-text">✨ Bracelets</h3>
             </div>
           </Link>
-
         </div>
-
       </section>
 
-      {/* WHY CHOOSE US */}
-      <section className="bg-white py-12">
-
+      <section className="py-12 border-t border-yellow-700">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center px-6">
-
-          <div>
-            <h3 className="font-bold text-xl text-black">
-              🚚 Fast Delivery
-            </h3>
-            <p className="mt-2 text-gray-800">
-              Quick shipping across India
-            </p>
+          <div className="gold-card p-6 rounded-xl">
+            <h3 className="font-bold text-xl gold-text">🚚 Fast Delivery</h3>
+            <p className="mt-2 text-yellow-100">Quick shipping across India</p>
           </div>
 
-          <div>
-            <h3 className="font-bold text-xl text-black">
-              💎 Premium Quality
-            </h3>
-            <p className="mt-2 text-gray-800">
-              High quality fashion jewellery
-            </p>
+          <div className="gold-card p-6 rounded-xl">
+            <h3 className="font-bold text-xl gold-text">💎 Premium Quality</h3>
+            <p className="mt-2 text-yellow-100">High quality fashion jewellery</p>
           </div>
 
-          <div>
-            <h3 className="font-bold text-xl text-black">
-              📞 Customer Support
-            </h3>
-            <p className="mt-2 text-gray-800 ">
-              Direct WhatsApp assistance
-            </p>
+          <div className="gold-card p-6 rounded-xl">
+            <h3 className="font-bold text-xl gold-text">📞 Customer Support</h3>
+            <p className="mt-2 text-yellow-100">Direct WhatsApp assistance</p>
           </div>
-
         </div>
-
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-black text-white text-center py-6">
-
-        <h3 className="font-bold text-lg">
+      <footer className="bg-black text-center py-6 border-t border-yellow-600">
+        <h3 className="font-bold text-lg gold-text">
           MARLA PREMIUM JEWELLER
         </h3>
 
-        <p className="mt-2 text-black">
+        <p className="mt-2 text-yellow-100">
           📞 9542511721
         </p>
 
-        <p className="mt-1">
+        <p className="mt-1 text-yellow-100">
           Hyderabad, Telangana
         </p>
-
       </footer>
-
     </main>
   );
 }
