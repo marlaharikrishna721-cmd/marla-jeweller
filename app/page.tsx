@@ -78,11 +78,11 @@ export default function Home() {
       {/* CATEGORIES */}
       <section className="max-w-7xl mx-auto px-6 py-12">
 
-        <h2 className="text-3xl font-bold text-center mb-10">
+        <h2 className="text-3xl font-bold text-center mb-10 text-black">
           Shop By Category
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-black">
 
           <Link
             href="/earrings"
@@ -98,7 +98,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="p-4 text-center">
+            <div className="p-4 text-center text-black">
               <h3 className="text-xl font-bold">
                 💎 Earrings
               </h3>
@@ -119,7 +119,7 @@ export default function Home() {
             </div>
 
             <div className="p-4 text-center">
-              <h3 className="text-xl font-bold">
+              <h3 className="text-xl font-bold text-black">
                 💍 Rings
               </h3>
             </div>
@@ -139,7 +139,7 @@ export default function Home() {
             </div>
 
             <div className="p-4 text-center">
-              <h3 className="text-xl font-bold">
+              <h3 className="text-xl font-bold text-black">
                 📿 Necklaces
               </h3>
             </div>
@@ -159,7 +159,7 @@ export default function Home() {
             </div>
 
             <div className="p-4 text-center">
-              <h3 className="text-xl font-bold">
+              <h3 className="text-xl font-bold text-black">
                 ✨ Bracelets
               </h3>
             </div>
@@ -175,7 +175,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center px-6">
 
           <div>
-            <h3 className="font-bold text-xl">
+            <h3 className="font-bold text-xl text-black">
               🚚 Fast Delivery
             </h3>
             <p className="mt-2 text-gray-800">
@@ -184,7 +184,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="font-bold text-xl">
+            <h3 className="font-bold text-xl text-black">
               💎 Premium Quality
             </h3>
             <p className="mt-2 text-gray-800">
@@ -193,10 +193,10 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="font-bold text-xl">
+            <h3 className="font-bold text-xl text-black">
               📞 Customer Support
             </h3>
-            <p className="mt-2 text-gray-800">
+            <p className="mt-2 text-gray-800 ">
               Direct WhatsApp assistance
             </p>
           </div>
@@ -212,7 +212,7 @@ export default function Home() {
           MARLA PREMIUM JEWELLER
         </h3>
 
-        <p className="mt-2">
+        <p className="mt-2 text-black">
           📞 9542511721
         </p>
 
