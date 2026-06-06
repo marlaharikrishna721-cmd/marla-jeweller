@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../components/CartContext";
@@ -12,6 +13,10 @@ export default function CartPage() {
     decreaseQuantity,
   } = useCart();
 
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+
   const total = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
@@ -23,14 +28,23 @@ export default function CartPage() {
   );
 
   const whatsappMessage = encodeURIComponent(
-    `Hello MARLA PREMIUM JEWELLER,\n\nI want to order:\n\n${cart
-      .map(
-        (item) =>
-          `${item.name} x ${item.quantity} = ₹${
-            item.price * item.quantity
-          }`
-      )
-      .join("\n")}\n\nTotal Items: ${totalItems}\nGrand Total: ₹${total}`
+    `Hello MARLA PREMIUM JEWELLER,
+
+Customer Details:
+Name: ${name}
+Phone: ${phone}
+Address: ${address}
+
+Order Details:
+${cart
+  .map(
+    (item) =>
+      `${item.name} x ${item.quantity} = ₹${item.price * item.quantity}`
+  )
+  .join("\n")}
+
+Total Items: ${totalItems}
+Grand Total: ₹${total}`
   );
 
   return (
@@ -120,12 +134,37 @@ export default function CartPage() {
             <div className="bg-white p-6 rounded-xl shadow mt-6">
               <h2 className="text-2xl font-bold">Grand Total: ₹{total}</h2>
 
+              <div className="mt-6 space-y-3">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full border p-3 rounded"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Phone Number"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  className="w-full border p-3 rounded"
+                />
+
+                <textarea
+                  placeholder="Delivery Address"
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                  className="w-full border p-3 rounded"
+                />
+              </div>
+
               <a
                 href={`https://wa.me/919542511721?text=${whatsappMessage}`}
                 target="_blank"
                 className="inline-block mt-4 bg-green-500 text-white px-6 py-3 rounded-lg font-bold"
               >
-                Order On WhatsApp
+                Place Order On WhatsApp
               </a>
             </div>
           </>
