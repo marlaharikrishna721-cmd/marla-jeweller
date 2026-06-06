@@ -119,8 +119,7 @@ export default function NecklacesPage() {
 
                   <button
                     onClick={() => {
-                      addToCart(item);
-                      alert("Added to Cart ✅");
+                      addToCart(item)
                     }}
                     className="bg-black text-white px-4 py-2 rounded w-full"
                   >
