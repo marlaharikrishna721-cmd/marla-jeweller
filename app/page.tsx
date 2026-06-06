@@ -13,7 +13,7 @@ export default function Home() {
   );
 
   return (
-    <main className="min-h-screen bg-gray-50 text-black">
+    <main className="min-h-screen luxury-bg text-white">
 
       {/* HEADER */}
       <header className="bg-black text-white sticky top-0 z-50">
@@ -27,7 +27,7 @@ export default function Home() {
 
             <Link
               href="/cart"
-              className="bg-white text-black px-4 py-2 rounded-lg font-bold"
+              className="gold-card rounded-xl shadow px-4 py-2 rounded-lg font-bold"
             >
               🛒 Cart ({cartCount})
             </Link>
@@ -35,7 +35,7 @@ export default function Home() {
             <a
               href="https://wa.me/919542511721"
               target="_blank"
-              className="bg-green-500 text-white px-4 py-2 rounded-lg"
+              className="gold-card rounded-xl shadow px-4 py-2 rounded-lg"
             >
               WhatsApp
             </a>
@@ -46,7 +46,7 @@ export default function Home() {
       </header>
 
       {/* HERO */}
-      <section className="bg-white text-center py-16 px-6">
+      <section className="text-center py-16 px-6">
 
         <h2 className="text-4xl md:text-5xl font-bold text-black">
           Premium Fashion Jewellery
