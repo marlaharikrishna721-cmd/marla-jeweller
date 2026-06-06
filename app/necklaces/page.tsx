@@ -126,13 +126,15 @@ export default function NecklacesPage() {
                     Add To Cart
                   </button>
 
-                  <a
-                    href={`https://wa.me/919542511721?text=Hello MARLA PREMIUM JEWELLER,%0A%0AI want to buy ${item.name}%0APrice: ₹${item.price}`}
-                    target="_blank"
-                    className="border px-4 py-2 rounded w-full text-center"
-                  >
-                    Buy Now
-                  </a>
+                  <button
+  onClick={() => {
+    addToCart(item);
+    window.location.href = "/cart";
+  }}
+  className="border px-4 py-2 rounded w-full text-center"
+>
+  Buy Now
+</button>
 
                 </div>
 
