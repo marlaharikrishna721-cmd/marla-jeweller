@@ -27,3 +27,32 @@ body {
 body {
   color: #000;
 }
+body {
+  background: #0b0b0b;
+  color: #f5d77b;
+}
+
+input,
+textarea {
+  color: #000;
+}
+
+.luxury-bg {
+  background: linear-gradient(135deg, #050505, #1a1200);
+}
+
+.gold-text {
+  color: #f5d77b;
+}
+
+.gold-button {
+  background: #d4af37;
+  color: #000;
+  font-weight: bold;
+}
+
+.gold-card {
+  background: #111;
+  border: 1px solid #d4af37;
+  color: #f5d77b;
+}
