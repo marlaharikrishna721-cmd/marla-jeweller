@@ -1,32 +1,53 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "./components/CartContext";
 
 export default function Home() {
+  const { cart } = useCart();
+
+  const cartCount = cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
+
   return (
     <main className="min-h-screen bg-gray-50">
 
       {/* HEADER */}
-      <header className="bg-black text-white">
+      <header className="bg-black text-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
           <h1 className="text-xl md:text-2xl font-bold">
             MARLA PREMIUM JEWELLER
           </h1>
 
-          <a
-            href="https://wa.me/919542511721"
-            target="_blank"
-            className="bg-green-500 px-4 py-2 rounded-lg"
-          >
-            WhatsApp
-          </a>
+          <div className="flex gap-3">
+
+            <Link
+              href="/cart"
+              className="bg-white text-black px-4 py-2 rounded-lg font-bold"
+            >
+              🛒 Cart ({cartCount})
+            </Link>
+
+            <a
+              href="https://wa.me/919542511721"
+              target="_blank"
+              className="bg-green-500 text-white px-4 py-2 rounded-lg"
+            >
+              WhatsApp
+            </a>
+
+          </div>
 
         </div>
       </header>
 
       {/* HERO */}
       <section className="bg-white text-center py-16 px-6">
+
         <h2 className="text-4xl md:text-5xl font-bold">
           Premium Fashion Jewellery
         </h2>
@@ -40,14 +61,21 @@ export default function Home() {
         </p>
 
         <p className="mt-2 text-gray-600">
-          J-165 Durga Bhavani Nagar,
-          Jubilee Hills,
-          Hyderabad,
-          Telangana
+          J-165 Durga Bhavani Nagar, Jubilee Hills,
+          Hyderabad, Telangana
         </p>
+
+        <a
+          href="https://wa.me/919542511721"
+          target="_blank"
+          className="inline-block mt-6 bg-green-500 text-white px-6 py-3 rounded-lg"
+        >
+          Order On WhatsApp
+        </a>
+
       </section>
 
-      {/* SHOP BY CATEGORY */}
+      {/* CATEGORIES */}
       <section className="max-w-7xl mx-auto px-6 py-12">
 
         <h2 className="text-3xl font-bold text-center mb-10">
@@ -56,8 +84,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
-          {/* Earrings */}
-          <a
+          <Link
             href="/earrings"
             className="bg-white rounded-xl shadow overflow-hidden hover:shadow-xl transition"
           >
@@ -66,7 +93,7 @@ export default function Home() {
                 src="/products/earrings.jpg"
                 alt="Earrings"
                 fill
-                sizes="(max-width:768px) 100vw, 25vw"
+                priority
                 className="object-cover"
               />
             </div>
@@ -76,10 +103,9 @@ export default function Home() {
                 💎 Earrings
               </h3>
             </div>
-          </a>
+          </Link>
 
-          {/* Rings */}
-          <a
+          <Link
             href="/rings"
             className="bg-white rounded-xl shadow overflow-hidden hover:shadow-xl transition"
           >
@@ -88,7 +114,6 @@ export default function Home() {
                 src="/products/ring.jpg"
                 alt="Rings"
                 fill
-                sizes="(max-width:768px) 100vw, 25vw"
                 className="object-cover"
               />
             </div>
@@ -98,10 +123,9 @@ export default function Home() {
                 💍 Rings
               </h3>
             </div>
-          </a>
+          </Link>
 
-          {/* Necklaces */}
-          <a
+          <Link
             href="/necklaces"
             className="bg-white rounded-xl shadow overflow-hidden hover:shadow-xl transition"
           >
@@ -110,7 +134,6 @@ export default function Home() {
                 src="/products/necklace.jpg"
                 alt="Necklaces"
                 fill
-                sizes="(max-width:768px) 100vw, 25vw"
                 className="object-cover"
               />
             </div>
@@ -120,10 +143,9 @@ export default function Home() {
                 📿 Necklaces
               </h3>
             </div>
-          </a>
+          </Link>
 
-          {/* Bracelets */}
-          <a
+          <Link
             href="/bracelets"
             className="bg-white rounded-xl shadow overflow-hidden hover:shadow-xl transition"
           >
@@ -132,7 +154,6 @@ export default function Home() {
                 src="/products/bracelet.jpg"
                 alt="Bracelets"
                 fill
-                sizes="(max-width:768px) 100vw, 25vw"
                 className="object-cover"
               />
             </div>
@@ -142,9 +163,46 @@ export default function Home() {
                 ✨ Bracelets
               </h3>
             </div>
-          </a>
+          </Link>
 
         </div>
+
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section className="bg-white py-12">
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center px-6">
+
+          <div>
+            <h3 className="font-bold text-xl">
+              🚚 Fast Delivery
+            </h3>
+            <p className="mt-2 text-gray-600">
+              Quick shipping across India
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-xl">
+              💎 Premium Quality
+            </h3>
+            <p className="mt-2 text-gray-600">
+              High quality fashion jewellery
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-xl">
+              📞 Customer Support
+            </h3>
+            <p className="mt-2 text-gray-600">
+              Direct WhatsApp assistance
+            </p>
+          </div>
+
+        </div>
+
       </section>
 
       {/* FOOTER */}

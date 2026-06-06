@@ -1,66 +1,155 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "../components/CartContext";
 
 export default function BraceletsPage() {
-  const [cartCount, setCartCount] = useState(0);
+  const { cart, addToCart } = useCart();
+
+  const cartCount = cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
 
   const products = [
-    { id: 1, name: "Charm Bracelet", price: 299, image: "/products/bracelet.jpg" },
-    { id: 2, name: "Fashion Bracelet", price: 399, image: "/products/bracelet.jpg" },
-    { id: 3, name: "Designer Bracelet", price: 599, image: "/products/bracelet.jpg" },
-    { id: 4, name: "Premium Bracelet", price: 799, image: "/products/bracelet.jpg" },
-    { id: 5, name: "Gold Style Bracelet", price: 999, image: "/products/bracelet.jpg" },
-    { id: 6, name: "Luxury Bracelet", price: 1499, image: "/products/bracelet.jpg" },
+    {
+      id: 301,
+      name: "Classic Bracelet",
+      price: 199,
+      image: "/products/bracelet.jpg",
+    },
+    {
+      id: 302,
+      name: "Designer Bracelet",
+      price: 399,
+      image: "/products/bracelet.jpg",
+    },
+    {
+      id: 303,
+      name: "Gold Style Bracelet",
+      price: 599,
+      image: "/products/bracelet.jpg",
+    },
+    {
+      id: 304,
+      name: "Premium Bracelet",
+      price: 799,
+      image: "/products/bracelet.jpg",
+    },
+    {
+      id: 305,
+      name: "Luxury Bracelet",
+      price: 999,
+      image: "/products/bracelet.jpg",
+    },
+    {
+      id: 306,
+      name: "Wedding Bracelet",
+      price: 1299,
+      image: "/products/bracelet.jpg",
+    },
   ];
 
   return (
     <main className="min-h-screen bg-gray-50">
-      <header className="bg-black text-white p-4 flex justify-between">
-        <a href="/" className="font-bold">MARLA PREMIUM JEWELLER</a>
-        <div>🛒 {cartCount}</div>
+
+      {/* Header */}
+      <header className="bg-black text-white p-4 flex justify-between items-center">
+
+        <Link
+          href="/"
+          className="font-bold text-xl"
+        >
+          MARLA PREMIUM JEWELLER
+        </Link>
+
+        <Link
+          href="/cart"
+          className="bg-white text-black px-4 py-2 rounded-full font-bold"
+        >
+          🛒 {cartCount}
+        </Link>
+
       </header>
 
-      <h1 className="text-4xl font-bold text-center py-8">✨ Bracelets Collection</h1>
+      {/* Title */}
+      <section className="text-center py-10">
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 pb-10">
-        {products.map((item) => (
-          <div key={item.id} className="bg-white rounded-xl shadow overflow-hidden">
-            <div className="relative h-72">
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                sizes="(max-width:768px) 100vw, 33vw"
-                className="object-cover"
-              />
-            </div>
+        <h1 className="text-4xl font-bold">
+          ✨ Bracelets Collection
+        </h1>
 
-            <div className="p-4">
-              <h2 className="font-bold text-xl">{item.name}</h2>
-              <p className="text-2xl font-bold mt-2">₹{item.price}</p>
+        <p className="text-gray-600 mt-3">
+          Premium Bracelets From ₹199 To ₹1299
+        </p>
 
-              <div className="flex gap-2 mt-4">
-                <button
-                  onClick={() => setCartCount(cartCount + 1)}
-                  className="bg-black text-white px-4 py-2 rounded w-full"
-                >
-                  Add To Cart
-                </button>
+      </section>
 
-                <a
-                  href={`https://wa.me/919542511721?text=I want to buy ${item.name}`}
-                  target="_blank"
-                  className="border px-4 py-2 rounded w-full text-center"
-                >
-                  Buy Now
-                </a>
+      {/* Products */}
+      <section className="max-w-7xl mx-auto px-6 pb-10">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          {products.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-xl shadow overflow-hidden"
+            >
+              <div className="relative h-72">
+
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  priority={item.id === 301}
+                  sizes="(max-width:768px) 100vw, 33vw"
+                  className="object-cover"
+                />
+
               </div>
+
+              <div className="p-4">
+
+                <h2 className="font-bold text-xl">
+                  {item.name}
+                </h2>
+
+                <p className="text-2xl font-bold mt-2">
+                  ₹{item.price}
+                </p>
+
+                <div className="flex gap-2 mt-4">
+
+                  <button
+                    onClick={() => {
+                      addToCart(item);
+                      alert("Added To Cart ✅");
+                    }}
+                    className="bg-black text-white px-4 py-2 rounded w-full"
+                  >
+                    Add To Cart
+                  </button>
+
+                  <a
+                    href={`https://wa.me/919542511721?text=Hello MARLA PREMIUM JEWELLER,%0A%0AI want to buy ${item.name}%0APrice: ₹${item.price}`}
+                    target="_blank"
+                    className="border px-4 py-2 rounded w-full text-center"
+                  >
+                    Buy Now
+                  </a>
+
+                </div>
+
+              </div>
+
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+
+        </div>
+
+      </section>
+
     </main>
   );
 }

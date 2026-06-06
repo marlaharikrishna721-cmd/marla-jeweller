@@ -1,25 +1,52 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 type CartItem = {
   id: number;
   name: string;
   price: number;
   image: string;
+  quantity: number;
 };
 
 type CartContextType = {
   cart: CartItem[];
-  addToCart: (item: CartItem) => void;
-  removeFromCart: (id: number) => void;
+
+  addToCart: (
+    item: Omit<CartItem, "quantity">
+  ) => void;
+
+  removeFromCart: (
+    id: number
+  ) => void;
+
+  increaseQuantity: (
+    id: number
+  ) => void;
+
+  decreaseQuantity: (
+    id: number
+  ) => void;
 };
 
-const CartContext = createContext<CartContextType>({
-  cart: [],
-  addToCart: () => {},
-  removeFromCart: () => {},
-});
+const CartContext =
+  createContext<CartContextType>({
+    cart: [],
+
+    addToCart: () => {},
+
+    removeFromCart: () => {},
+
+    increaseQuantity: () => {},
+
+    decreaseQuantity: () => {},
+  });
 
 export function CartProvider({
   children,
@@ -28,12 +55,103 @@ export function CartProvider({
 }) {
   const [cart, setCart] = useState<CartItem[]>([]);
 
-  const addToCart = (item: CartItem) => {
-    setCart((prev) => [...prev, item]);
+  useEffect(() => {
+    const savedCart =
+      localStorage.getItem(
+        "marla-cart"
+      );
+
+    if (savedCart) {
+      setCart(
+        JSON.parse(savedCart)
+      );
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "marla-cart",
+      JSON.stringify(cart)
+    );
+  }, [cart]);
+
+  const addToCart = (
+    item: Omit<CartItem, "quantity">
+  ) => {
+    setCart((prev) => {
+      const existing =
+        prev.find(
+          (p) => p.id === item.id
+        );
+
+      if (existing) {
+        return prev.map((p) =>
+          p.id === item.id
+            ? {
+                ...p,
+                quantity:
+                  p.quantity + 1,
+              }
+            : p
+        );
+      }
+
+      return [
+        ...prev,
+        {
+          ...item,
+          quantity: 1,
+        },
+      ];
+    });
   };
 
-  const removeFromCart = (id: number) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
+  const increaseQuantity = (
+    id: number
+  ) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id
+          ? {
+              ...item,
+              quantity:
+                item.quantity + 1,
+            }
+          : item
+      )
+    );
+  };
+
+  const decreaseQuantity = (
+    id: number
+  ) => {
+    setCart((prev) =>
+      prev
+        .map((item) =>
+          item.id === id
+            ? {
+                ...item,
+                quantity:
+                  item.quantity - 1,
+              }
+            : item
+        )
+        .filter(
+          (item) =>
+            item.quantity > 0
+        )
+    );
+  };
+
+  const removeFromCart = (
+    id: number
+  ) => {
+    setCart((prev) =>
+      prev.filter(
+        (item) =>
+          item.id !== id
+      )
+    );
   };
 
   return (
@@ -42,6 +160,8 @@ export function CartProvider({
         cart,
         addToCart,
         removeFromCart,
+        increaseQuantity,
+        decreaseQuantity,
       }}
     >
       {children}
@@ -49,4 +169,5 @@ export function CartProvider({
   );
 }
 
-export const useCart = () => useContext(CartContext);
+export const useCart = () =>
+  useContext(CartContext);

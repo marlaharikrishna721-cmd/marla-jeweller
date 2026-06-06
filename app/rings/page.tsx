@@ -1,11 +1,16 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCart } from "../components/CartContext";
 
 export default function RingsPage() {
   const { cart, addToCart } = useCart();
+
+  const cartCount = cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
 
   const rings = [
     {
@@ -50,25 +55,24 @@ export default function RingsPage() {
     <main className="min-h-screen bg-gray-50">
 
       {/* Header */}
-      <header className="bg-black text-white">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <header className="bg-black text-white p-4 flex justify-between items-center">
 
-          <a href="/" className="font-bold text-xl">
-            MARLA PREMIUM JEWELLER
-          </a>
+        <Link href="/" className="font-bold text-xl">
+          MARLA PREMIUM JEWELLER
+        </Link>
 
-          <a
-  href="/cart"
-  className="bg-white text-black px-4 py-2 rounded-full font-bold"
->
-  🛒 {cart.length}
-</a>
+        <Link
+          href="/cart"
+          className="bg-white text-black px-4 py-2 rounded-full font-bold"
+        >
+          🛒 {cartCount}
+        </Link>
 
-        </div>
       </header>
 
       {/* Title */}
       <section className="text-center py-10">
+
         <h1 className="text-4xl font-bold">
           💍 Rings Collection
         </h1>
@@ -76,6 +80,7 @@ export default function RingsPage() {
         <p className="mt-3 text-gray-600">
           Premium Rings From ₹149 To ₹1299
         </p>
+
       </section>
 
       {/* Products */}
@@ -83,18 +88,18 @@ export default function RingsPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          {rings.map((ring) => (
+          {rings.map((item) => (
             <div
-              key={ring.id}
+              key={item.id}
               className="bg-white rounded-xl shadow overflow-hidden"
             >
-
               <div className="relative h-72">
 
                 <Image
-                  src={ring.image}
-                  alt={ring.name}
+                  src={item.image}
+                  alt={item.name}
                   fill
+                  priority={item.id === 1}
                   sizes="(max-width:768px) 100vw, 33vw"
                   className="object-cover"
                 />
@@ -104,24 +109,27 @@ export default function RingsPage() {
               <div className="p-5">
 
                 <h2 className="text-xl font-bold">
-                  {ring.name}
+                  {item.name}
                 </h2>
 
                 <p className="text-2xl font-bold mt-2">
-                  ₹{ring.price}
+                  ₹{item.price}
                 </p>
 
                 <div className="flex gap-2 mt-4">
 
                   <button
-                    onClick={() => addToCart(ring)}
-  className="bg-black text-white px-4 py-2 rounded w-full"
->
-  Add To Cart
+                    onClick={() => {
+                      addToCart(item);
+                      alert("Added To Cart ✅");
+                    }}
+                    className="bg-black text-white px-4 py-2 rounded w-full"
+                  >
+                    Add To Cart
                   </button>
 
                   <a
-                    href={`https://wa.me/919542511721?text=I want to buy ${ring.name} for ₹${ring.price}`}
+                    href={`https://wa.me/919542511721?text=Hello MARLA PREMIUM JEWELLER,%0A%0AI want to buy ${item.name}%0APrice: ₹${item.price}`}
                     target="_blank"
                     className="border px-4 py-2 rounded w-full text-center"
                   >
@@ -138,23 +146,6 @@ export default function RingsPage() {
         </div>
 
       </section>
-
-      {/* Footer */}
-      <footer className="bg-black text-white text-center py-6">
-
-        <h3 className="font-bold">
-          MARLA PREMIUM JEWELLER
-        </h3>
-
-        <p className="mt-2">
-          📞 9542511721
-        </p>
-
-        <p className="mt-1">
-          Hyderabad, Telangana
-        </p>
-
-      </footer>
 
     </main>
   );
