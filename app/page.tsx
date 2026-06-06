@@ -48,15 +48,15 @@ export default function Home() {
       {/* HERO */}
       <section className="bg-white text-center py-16 px-6">
 
-        <h2 className="text-4xl md:text-5xl font-bold">
+        <h2 className="text-4xl md:text-5xl font-bold text-black">
           Premium Fashion Jewellery
         </h2>
 
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-gray-600 text-black">
           Stylish Jewellery from ₹50 to ₹1500
         </p>
 
-        <p className="mt-4 font-semibold">
+        <p className="mt-4 font-semibold text-black">
           📞 9542511721
         </p>
 
