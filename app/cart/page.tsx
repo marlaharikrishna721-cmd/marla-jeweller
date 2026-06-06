@@ -66,15 +66,15 @@ I will send payment screenshot here.`
         </Link>
       </header>
 
-      <section className="text-center py-10">
+      <section className="text-center py-10 text-black">
         <h1 className="text-4xl font-bold">🛒 Shopping Cart</h1>
         <p className="mt-2 text-gray-600">Total Items: {totalItems}</p>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 pb-10">
+      <section className="max-w-5xl mx-auto px-6 pb-10 text-black">
         {cart.length === 0 ? (
           <div className="bg-white p-8 rounded-xl shadow text-center">
-            <h2 className="text-2xl font-bold">Your Cart Is Empty</h2>
+            <h2 className="text-2xl font-bold text-black">Your Cart Is Empty</h2>
 
             <Link
               href="/"
@@ -101,9 +101,9 @@ I will send payment screenshot here.`
                 </div>
 
                 <div className="flex-1">
-                  <h2 className="font-bold text-xl">{item.name}</h2>
-                  <p className="text-gray-600">Price: ₹{item.price}</p>
-                  <p className="font-semibold">
+                  <h2 className="font-bold text-xl text-black">{item.name}</h2>
+                  <p className="text-gray-600 text-black">Price: ₹{item.price}</p>
+                  <p className="font-semibold text-black">
                     Item Total: ₹{item.price * item.quantity}
                   </p>
 
@@ -136,10 +136,10 @@ I will send payment screenshot here.`
             ))}
 
             <div className="bg-white p-6 rounded-xl shadow mt-6">
-              <h2 className="text-2xl font-bold">Grand Total: ₹{total}</h2>
+              <h2 className="text-2xl font-bold text-black">Grand Total: ₹{total}</h2>
 
               <div className="mt-5 border rounded-lg p-4 bg-gray-50 text-center">
-                <h3 className="font-bold text-lg">Pay Using UPI</h3>
+                <h3 className="font-bold text-lg text-black">Pay Using UPI</h3>
 
                 <div className="flex justify-center mt-4">
                   <Image
@@ -151,7 +151,7 @@ I will send payment screenshot here.`
                   />
                 </div>
 
-                <p className="mt-4">
+                <p className="mt-4 text-black">
                   UPI ID:{" "}
                   <span className="font-bold">Hari95425@ybl</span>
                 </p>
@@ -183,7 +183,7 @@ I will send payment screenshot here.`
                   placeholder="Delivery Address"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
-                  className="w-full border p-3 rounded"
+                  className="w-full border p-3 rounded  text-black bg-white"
                 />
               </div>
 
