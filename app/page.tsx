@@ -75,6 +75,13 @@ export default function Home() {
         >
           Order On WhatsApp
         </a>
+        <a
+  href="https://instagram.com/mayra_timeless_elegance"
+  target="_blank"
+  className="inline-block mt-4 ml-3 bg-pink-600 text-white px-6 py-3 rounded-lg font-bold"
+>
+  📸 Follow On Instagram
+</a>
 
       </section>
 
