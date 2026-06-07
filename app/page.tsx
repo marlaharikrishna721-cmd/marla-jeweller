@@ -4,6 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "./components/CartContext";
 
+<div className="bg-yellow-500 text-black text-center py-2 font-bold">
+  🎉 Free Delivery Above ₹500 | Premium Fashion Jewellery
+</div>
+
 export default function Home() {
   const { cart } = useCart();
 

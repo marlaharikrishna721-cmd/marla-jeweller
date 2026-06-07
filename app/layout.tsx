@@ -26,6 +26,13 @@ export default function RootLayout({
             WhatsApp
           </a>
         </CartProvider>
+        <a
+  href="https://wa.me/919542511721"
+  target="_blank"
+  className="fixed bottom-5 right-5 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg font-bold z-50"
+>
+  WhatsApp
+</a>
       </body>
     </html>
   );
