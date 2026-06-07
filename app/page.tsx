@@ -209,6 +209,40 @@ export default function Home() {
 
       </section>
 
+      <section className="max-w-6xl mx-auto px-6 py-12">
+  <h2 className="text-3xl font-bold text-center gold-text mb-8">
+    Customer Reviews
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-6">
+
+    <div className="gold-card p-6 rounded-xl">
+      <h3 className="font-bold">Priya</h3>
+      <p className="mt-2">⭐⭐⭐⭐⭐</p>
+      <p className="mt-2">
+        Beautiful jewellery and fast delivery.
+      </p>
+    </div>
+
+    <div className="gold-card p-6 rounded-xl">
+      <h3 className="font-bold">Anusha</h3>
+      <p className="mt-2">⭐⭐⭐⭐⭐</p>
+      <p className="mt-2">
+        Quality is amazing. Loved the packaging.
+      </p>
+    </div>
+
+    <div className="gold-card p-6 rounded-xl">
+      <h3 className="font-bold">Sneha</h3>
+      <p className="mt-2">⭐⭐⭐⭐⭐</p>
+      <p className="mt-2">
+        Affordable and stylish collection.
+      </p>
+    </div>
+
+  </div>
+</section>
+
       <footer className="bg-black text-center py-6 border-t border-yellow-600">
 
         <h3 className="font-bold text-lg gold-text">
