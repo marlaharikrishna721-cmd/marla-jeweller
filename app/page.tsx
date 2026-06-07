@@ -35,13 +35,7 @@ export default function Home() {
               🛒 Cart ({cartCount})
             </Link>
 
-            <a
-              href="https://wa.me/919542511721"
-              target="_blank"
-              className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold"
-            >
-              WhatsApp
-            </a>
+           
           </div>
 
         </div>
