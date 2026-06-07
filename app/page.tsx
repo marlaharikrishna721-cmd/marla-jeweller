@@ -19,7 +19,7 @@ export default function Home() {
 
           <Link href="/">
             <Image
-              src="/products/logo.png"
+              src="/logo.png"
               alt="MAYRA"
               width={180}
               height={60}
