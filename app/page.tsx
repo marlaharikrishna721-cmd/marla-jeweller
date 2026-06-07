@@ -19,7 +19,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
           <h1 className="text-xl md:text-2xl font-bold gold-text">
-            MARLA PREMIUM JEWELLER
+            MAYRA Timeless Elegance
           </h1>
 
           <div className="flex gap-3">
@@ -209,7 +209,7 @@ export default function Home() {
       <footer className="bg-black text-center py-6 border-t border-yellow-600">
 
         <h3 className="font-bold text-lg gold-text">
-          MARLA PREMIUM JEWELLER
+           MAYRA Timeless Elegance
         </h3>
 
         <p className="mt-2 text-yellow-100">

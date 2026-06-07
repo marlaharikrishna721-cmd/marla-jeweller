@@ -58,7 +58,7 @@ export function CartProvider({
   useEffect(() => {
     const savedCart =
       localStorage.getItem(
-        "marla-cart"
+        "MAYRA-cart"
       );
 
     if (savedCart) {
@@ -70,7 +70,7 @@ export function CartProvider({
 
   useEffect(() => {
     localStorage.setItem(
-      "marla-cart",
+      "MAYRA-cart",
       JSON.stringify(cart)
     );
   }, [cart]);

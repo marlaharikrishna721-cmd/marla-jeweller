@@ -28,7 +28,7 @@ export default function CartPage() {
   );
 
   const whatsappMessage = encodeURIComponent(
-    `Hello MARLA PREMIUM JEWELLER,
+    `Hello  MAYRA Timeless Elegance,
 
 Customer Details:
 Name: ${name}
@@ -55,7 +55,7 @@ I will send payment screenshot here.`
     <main className="min-h-screen bg-gray-50">
       <header className="bg-black text-white p-4 flex justify-between items-center">
         <Link href="/" className="font-bold text-xl">
-          MARLA PREMIUM JEWELLER
+          MAYRA Timeless Elegance
         </Link>
 
         <Link

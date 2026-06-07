@@ -22,7 +22,7 @@ export default function EarringsPage() {
     <main className="min-h-screen luxury-bg text-white">
       <header className="bg-black border-b border-yellow-600 p-4 flex justify-between items-center sticky top-0 z-50">
         <Link href="/" className="font-bold text-xl gold-text">
-          MARLA PREMIUM JEWELLER
+           MAYRA Timeless Elegance
         </Link>
 
         <Link href="/cart" className="gold-button px-4 py-2 rounded-full font-bold">

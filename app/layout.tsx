@@ -3,7 +3,7 @@ import "./globals.css";
 import { CartProvider } from "./components/CartContext";
 
 export const metadata: Metadata = {
-  title: "MARLA PREMIUM JEWELLER",
+  title: "MAYRA Timeless Elegance",
   description: "Affordable Fashion Jewellery",
 };
 
