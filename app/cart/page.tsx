@@ -201,6 +201,28 @@ I will send payment screenshot here.`
                 </p>
               </div>
 
+              <div className="mt-4 p-4 bg-yellow-50 border rounded-lg">
+  <h3 className="font-bold text-black">
+    Delivery Information
+  </h3>
+
+  <p className="text-black">
+    ✅ Free delivery above ₹500
+  </p>
+
+  <p className="text-black">
+    ✅ Hyderabad delivery ₹60 below ₹500
+  </p>
+
+  <p className="text-black">
+    ✅ Outside Hyderabad charges based on distance
+  </p>
+
+  <p className="text-black">
+    ✅ Delivery within 2–5 working days
+  </p>
+</div>
+
               <div className="mt-6 space-y-3">
                 <input
                   type="text"
