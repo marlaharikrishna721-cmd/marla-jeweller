@@ -226,13 +226,22 @@ I will send payment screenshot here.`
                 />
               </div>
 
-              <a
-                href={`https://wa.me/919542511721?text=${whatsappMessage}`}
-                target="_blank"
-                className="inline-block mt-4 bg-green-500 text-white px-6 py-3 rounded-lg font-bold"
-              >
-                Place Order On WhatsApp
-              </a>
+              <button
+  onClick={() => {
+    if (!name || !phone || !address) {
+      alert("Please fill Name, Phone Number and Address");
+      return;
+    }
+
+    window.open(
+      `https://wa.me/919542511721?text=${whatsappMessage}`,
+      "_blank"
+    );
+  }}
+  className="inline-block mt-4 bg-green-500 text-white px-6 py-3 rounded-lg font-bold"
+>
+  Place Order On WhatsApp
+</button>
             </div>
           </>
         )}
