@@ -18,9 +18,13 @@ export default function Home() {
       <header className="bg-black sticky top-0 z-50 border-b border-yellow-600">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-          <h1 className="text-xl md:text-2xl font-bold gold-text">
-            MAYRA Timeless Elegance
-          </h1>
+          <Image
+  src="/logo.png"
+  alt="MAYRA"
+  width={180}
+  height={60}
+  priority
+/>
 
           <div className="flex gap-3">
 
