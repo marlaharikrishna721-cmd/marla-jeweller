@@ -27,8 +27,11 @@ export default function CartPage() {
     0
   );
 
+  const deliveryCharge = total >= 500 ? 0 : 60;
+  const finalTotal = total + deliveryCharge;
+
   const whatsappMessage = encodeURIComponent(
-    `Hello  MAYRA Timeless Elegance,
+    `Hello MAYRA Timeless Elegance,
 
 Customer Details:
 Name: ${name}
@@ -44,10 +47,14 @@ ${cart
   .join("\n")}
 
 Total Items: ${totalItems}
-Grand Total: ₹${total}
+Subtotal: ₹${total}
+Hyderabad Delivery: ${deliveryCharge === 0 ? "Free" : `₹${deliveryCharge}`}
+Grand Total: ₹${finalTotal}
+
+Note: Free delivery above ₹500. Far Hyderabad / outside Hyderabad delivery charges may vary based on distance.
 
 Payment:
-I will pay / paid using UPI ID: Hari95425@ybl
+I will pay / paid ₹${finalTotal} using UPI ID: Hari95425@ybl
 I will send payment screenshot here.`
   );
 
@@ -68,13 +75,15 @@ I will send payment screenshot here.`
 
       <section className="text-center py-10 text-black">
         <h1 className="text-4xl font-bold">🛒 Shopping Cart</h1>
-        <p className="mt-2 text-gray-600">Total Items: {totalItems}</p>
+        <p className="mt-2 text-gray-700">Total Items: {totalItems}</p>
       </section>
 
       <section className="max-w-5xl mx-auto px-6 pb-10 text-black">
         {cart.length === 0 ? (
           <div className="bg-white p-8 rounded-xl shadow text-center">
-            <h2 className="text-2xl font-bold text-black">Your Cart Is Empty</h2>
+            <h2 className="text-2xl font-bold text-black">
+              Your Cart Is Empty
+            </h2>
 
             <Link
               href="/"
@@ -101,8 +110,14 @@ I will send payment screenshot here.`
                 </div>
 
                 <div className="flex-1">
-                  <h2 className="font-bold text-xl text-black">{item.name}</h2>
-                  <p className="text-gray-600 text-black">Price: ₹{item.price}</p>
+                  <h2 className="font-bold text-xl text-black">
+                    {item.name}
+                  </h2>
+
+                  <p className="text-gray-700">
+                    Price: ₹{item.price}
+                  </p>
+
                   <p className="font-semibold text-black">
                     Item Total: ₹{item.price * item.quantity}
                   </p>
@@ -115,7 +130,9 @@ I will send payment screenshot here.`
                       -
                     </button>
 
-                    <span className="font-bold text-lg">{item.quantity}</span>
+                    <span className="font-bold text-lg">
+                      {item.quantity}
+                    </span>
 
                     <button
                       onClick={() => increaseQuantity(item.id)}
@@ -136,10 +153,32 @@ I will send payment screenshot here.`
             ))}
 
             <div className="bg-white p-6 rounded-xl shadow mt-6">
-              <h2 className="text-2xl font-bold text-black">Grand Total: ₹{total}</h2>
+              <h2 className="text-2xl font-bold text-black">
+                Order Summary
+              </h2>
+
+              <div className="mt-4 space-y-2 text-black">
+                <p>Subtotal: ₹{total}</p>
+
+                <p>
+                  Hyderabad Delivery:{" "}
+                  {deliveryCharge === 0 ? "Free" : `₹${deliveryCharge}`}
+                </p>
+
+                <p className="text-sm text-gray-700">
+                  Free delivery above ₹500. Far Hyderabad / outside Hyderabad
+                  delivery charges may vary based on distance.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-3">
+                  Grand Total: ₹{finalTotal}
+                </h3>
+              </div>
 
               <div className="mt-5 border rounded-lg p-4 bg-gray-50 text-center">
-                <h3 className="font-bold text-lg text-black">Pay Using UPI</h3>
+                <h3 className="font-bold text-lg text-black">
+                  Pay Using UPI
+                </h3>
 
                 <div className="flex justify-center mt-4">
                   <Image
@@ -156,9 +195,9 @@ I will send payment screenshot here.`
                   <span className="font-bold">Hari95425@ybl</span>
                 </p>
 
-                <p className="text-sm text-gray-600 mt-2">
-                  Scan the QR code and pay. Then click "Place Order On
-                  WhatsApp" and send your payment screenshot.
+                <p className="text-sm text-gray-700 mt-2">
+                  Pay ₹{finalTotal}. Then click "Place Order On WhatsApp" and
+                  send your payment screenshot.
                 </p>
               </div>
 
@@ -168,7 +207,7 @@ I will send payment screenshot here.`
                   placeholder="Your Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full border p-3 rounded"
+                  className="w-full border p-3 rounded text-black bg-white"
                 />
 
                 <input
@@ -176,14 +215,14 @@ I will send payment screenshot here.`
                   placeholder="Phone Number"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full border p-3 rounded"
+                  className="w-full border p-3 rounded text-black bg-white"
                 />
 
                 <textarea
                   placeholder="Delivery Address"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
-                  className="w-full border p-3 rounded  text-black bg-white"
+                  className="w-full border p-3 rounded text-black bg-white"
                 />
               </div>
 
