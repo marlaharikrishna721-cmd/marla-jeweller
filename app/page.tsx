@@ -242,6 +242,43 @@ export default function Home() {
 
   </div>
 </section>
+<section className="max-w-6xl mx-auto px-6 py-12">
+  <h2 className="text-3xl font-bold text-center gold-text mb-8">
+    Why Choose MAYRA?
+  </h2>
+
+  <div className="grid md:grid-cols-4 gap-6 text-center">
+
+    <div className="gold-card p-4 rounded-xl">
+      <h3 className="font-bold gold-text">💎 Premium Quality</h3>
+      <p className="mt-2 text-yellow-100">
+        Stylish and quality fashion jewellery.
+      </p>
+    </div>
+
+    <div className="gold-card p-4 rounded-xl">
+      <h3 className="font-bold gold-text">🚚 Fast Delivery</h3>
+      <p className="mt-2 text-yellow-100">
+        Quick shipping across Hyderabad and India.
+      </p>
+    </div>
+
+    <div className="gold-card p-4 rounded-xl">
+      <h3 className="font-bold gold-text">🔒 Secure Payment</h3>
+      <p className="mt-2 text-yellow-100">
+        Safe UPI payments and order confirmation.
+      </p>
+    </div>
+
+    <div className="gold-card p-4 rounded-xl">
+      <h3 className="font-bold gold-text">❤️ Trusted Service</h3>
+      <p className="mt-2 text-yellow-100">
+        Friendly customer support on WhatsApp.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       <footer className="bg-black text-center py-6 border-t border-yellow-600">
 
