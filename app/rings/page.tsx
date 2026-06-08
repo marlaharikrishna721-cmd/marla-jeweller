@@ -10,12 +10,12 @@ export default function RingsPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const rings = [
-    { id: 1, name: "Rose Gold Ring", price: 149, image: "/products/ring1.jpg" },
-    { id: 2, name: "Diamond Style Ring", price: 299, image: "/products/ring2.jpg" },
-    { id: 3, name: "Couple Ring", price: 499, image: "/products/ring3.jpg" },
-    { id: 4, name: "Premium Ring", price: 799, image: "/products/ring4.jpg" },
-    { id: 5, name: "Luxury Ring", price: 999, image: "/products/ring5.jpg" },
-    { id: 6, name: "Wedding Ring", price: 1299, image: "/products/ring6.jpg" },
+    { id: 1, name: "Twin Blossom Gam Stone Ring", price: 49, image: "/products/ring1.jpg" },
+    { id: 2, name: "Ruby Blossom Vintage Ring", price: 59, image: "/products/ring2.jpg" },
+    { id: 3, name: "Twisted Crystal Band Ring", price: 79, image: "/products/ring3.jpg" },
+    { id: 4, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring4.jpg" },
+    { id: 5, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring5.jpg" },
+    { id: 6, name: "Regal Bloom Open Ring", price: 99, image: "/products/ring6.jpg" },
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function RingsPage() {
 
       <section className="text-center py-10">
         <h1 className="text-5xl font-bold gold-text">💍 Rings Collection</h1>
-        <p className="text-yellow-100 mt-3">Premium Rings From ₹149 To ₹1299</p>
+        <p className="text-yellow-100 mt-3">Premium Rings From ₹49 To ₹299</p>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-10">
