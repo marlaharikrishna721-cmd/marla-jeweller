@@ -20,7 +20,7 @@ export default function NecklacesPage() {
     { id: 206, name: "Ruby Red Antique Pendant Necklace", price: 249, image: "/products/necklace8.jpg" },
     { id: 206, name: "Ruby Green Antique Pendant Necklace", price: 199, image: "/products/necklace9.jpg" },
     { id: 206, name: "Ruby Blue Antique Pendant Necklace", price: 149, image: "/products/necklace10.jpg" },
-    { id: 206, name: "Lakshmi Pearl Heritage Pendant Necklace", price: 249, image: "/products/necklace11.jpg" },
+    { id: 206, name: "", price: 249, image: "/products/necklace11.jpg" },
     { id: 206, name: "Temple Grace Pearl Pendant Necklace", price: 199, image: "/products/necklace12.jpg" },
     { id: 206, name: "Amethyst Royale Necklace", price: 299, image: "/products/necklace13.jpg" },
    
