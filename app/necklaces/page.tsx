@@ -10,12 +10,20 @@ export default function NecklacesPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const necklaces = [
-    { id: 201, name: "Pearl Necklace", price: 199, image: "/products/necklace1.jpg" },
-    { id: 202, name: "Gold Necklace", price: 399, image: "/products/necklace2.jpg" },
-    { id: 203, name: "Designer Necklace", price: 599, image: "/products/necklace3.jpg" },
-    { id: 204, name: "Premium Necklace", price: 799, image: "/products/necklace4.jpg" },
-    { id: 205, name: "Luxury Necklace", price: 999, image: "/products/necklace5.jpg" },
-    { id: 206, name: "Wedding Necklace", price: 1299, image: "/products/necklace6.jpg" },
+    { id: 201, name: "Golden Bead Classic Chain", price: 49, image: "/products/necklace1.jpg" },
+    { id: 202, name: "Ruby Blossom Choker Necklace", price: 119, image: "/products/necklace2.jpg" },
+    { id: 203, name: "Ruby Bloom Minimal Choker Necklace", price: 129, image: "/products/necklace3.jpg" },
+    { id: 204, name: "Pearl Dew Drop Necklace", price: 129, image: "/products/necklace4.jpg" },
+    { id: 205, name: "Royal Amethyst Drop Choker Necklace", price: 129, image: "/products/necklace5.jpg" },
+    { id: 206, name: "Ruby Pistal Green Antique Pendant Necklace", price: 149, image: "/products/necklace6.jpg" },
+    { id: 206, name: "Ruby Purple Antique PendantNecklace", price: 249, image: "/products/necklace7.jpg" },
+    { id: 206, name: "Ruby Red Antique Pendant Necklace", price: 249, image: "/products/necklace8.jpg" },
+    { id: 206, name: "Ruby Green Antique Pendant Necklace", price: 199, image: "/products/necklace9.jpg" },
+    { id: 206, name: "Ruby Blue Antique Pendant Necklace", price: 149, image: "/products/necklace10.jpg" },
+    { id: 206, name: "Lakshmi Pearl Heritage Pendant Necklace", price: 249, image: "/products/necklace11.jpg" },
+    { id: 206, name: "Temple Grace Pearl Pendant Necklace", price: 199, image: "/products/necklace12.jpg" },
+    { id: 206, name: "Amethyst Royale Necklace", price: 299, image: "/products/necklace13.jpg" },
+   
   ];
 
   return (
@@ -32,7 +40,7 @@ export default function NecklacesPage() {
 
       <section className="text-center py-10">
         <h1 className="text-5xl font-bold gold-text">📿 Necklaces Collection</h1>
-        <p className="text-yellow-100 mt-3">Premium Necklaces From ₹199 To ₹1299</p>
+        <p className="text-yellow-100 mt-3">Premium Necklaces From ₹199 To ₹499</p>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-10">
