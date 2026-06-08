@@ -10,12 +10,15 @@ export default function EarringsPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const earrings = [
-    { id: 101, name: "Pearl Earrings", price: 99, image: "/products/earring1.jpg" },
-    { id: 102, name: "Stud Earrings", price: 149, image: "/products/earring2.jpg" },
-    { id: 103, name: "Designer Earrings", price: 299, image: "/products/earring3.jpg" },
-    { id: 104, name: "Premium Earrings", price: 499, image: "/products/earring4.jpg" },
-    { id: 105, name: "Luxury Earrings", price: 799, image: "/products/earring5.jpg" },
-    { id: 106, name: "Wedding Earrings", price: 1299, image: "/products/earring6.jpg" },
+    { id: 101, name: "Silver Blossom Hoop Drop Earrings", price: 49, image: "/products/earring1.jpg" },
+    { id: 102, name: "Midnight Crystal Gold Drop Earrings", price: 49, image: "/products/earring2.jpg" },
+    { id: 103, name: "Midnight Crystal Black DropEarrings", price: 49, image: "/products/earring3.jpg" },
+    { id: 104, name: "Amethyst Majesty Jhumkas Earrings", price: 79, image: "/products/earring4.jpg" },
+    { id: 105, name: "Amethyst Bloom Jhymkas Earrings", price: 99, image: "/products/earring5.jpg" },
+    { id: 106, name: "Emerald Pearl Swing Earrings", price: 99, image: "/products/earring6.jpg" },
+     { id: 106, name: "Ruby Emerald Earrings", price: 129, image: "/products/earring7.jpg" },
+      { id: 106, name: "Floral Hoop Pearl Earrings", price: 149, image: "/products/earring8.jpg" },
+       { id: 106, name: "Vintage Royal Earrings", price: 179, image: "/products/earring9.jpg" },
   ];
 
   return (
@@ -32,7 +35,7 @@ export default function EarringsPage() {
 
       <section className="text-center py-10">
         <h1 className="text-5xl font-bold gold-text">💎 Earrings Collection</h1>
-        <p className="text-yellow-100 mt-3">Premium Earrings From ₹99 To ₹1299</p>
+        <p className="text-yellow-100 mt-3">Premium Earrings From ₹99 To ₹499</p>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-10">
