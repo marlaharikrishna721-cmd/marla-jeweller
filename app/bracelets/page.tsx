@@ -10,12 +10,11 @@ export default function BraceletsPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const products = [
-    { id: 301, name: "Classic Bracelet", price: 199, image: "/products/bracelet1.jpg" },
-    { id: 302, name: "Designer Bracelet", price: 399, image: "/products/bracelet2.jpg" },
-    { id: 303, name: "Gold Style Bracelet", price: 599, image: "/products/bracelet3.jpg" },
-    { id: 304, name: "Premium Bracelet", price: 799, image: "/products/bracelet4.jpg" },
-    { id: 305, name: "Luxury Bracelet", price: 999, image: "/products/bracelet5.jpg" },
-    { id: 306, name: "Wedding Bracelet", price: 1299, image: "/products/bracelet6.jpg" },
+    { id: 301, name: "Rose Gold Cristal Wave Bracelet", price: 149, image: "/products/bracelet1.jpg" },
+    { id: 302, name: "Cristal Clover Charm Bracelet", price: 169, image: "/products/bracelet2.jpg" },
+    { id: 303, name: "Silver Spark Crystal Bracelet", price: 119, image: "/products/bracelet3.jpg" },
+    { id: 304, name: "Golden Sphere Bracelet", price: 119, image: "/products/bracelet4.jpg" },
+    
   ];
 
   return (
@@ -32,7 +31,7 @@ export default function BraceletsPage() {
 
       <section className="text-center py-10">
         <h1 className="text-5xl font-bold gold-text">✨ Bracelets Collection</h1>
-        <p className="text-yellow-100 mt-3">Premium Bracelets From ₹199 To ₹1299</p>
+        <p className="text-yellow-100 mt-3">Premium Bracelets From ₹199 To ₹499</p>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-10">
