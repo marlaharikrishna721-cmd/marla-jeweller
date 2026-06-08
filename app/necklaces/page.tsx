@@ -15,7 +15,7 @@ export default function NecklacesPage() {
     { id: 203, name: "Ruby Minimal Choker Necklace", price: 129, image: "/products/necklace3.jpg" },
     { id: 204, name: "Pearl Dew Drop Necklace", price: 129, image: "/products/necklace4.jpg" },
     { id: 205, name: "Royal Amethyst Necklace", price: 129, image: "/products/necklace5.jpg" },
-    { id: 206, name: "Ruby Pistal Green Pendant Necklace", price: 149, image: "/products/necklace6.jpg" },
+    { id: 206, name: "Ruby Pistal Pendant Necklace", price: 149, image: "/products/necklace6.jpg" },
     { id: 206, name: "Ruby Purple Pendant Necklace", price: 249, image: "/products/necklace7.jpg" },
     { id: 206, name: "Ruby Red Pendant Necklace", price: 249, image: "/products/necklace8.jpg" },
     { id: 206, name: "Ruby Green Pendant Necklace", price: 199, image: "/products/necklace9.jpg" },
