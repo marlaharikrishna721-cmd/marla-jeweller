@@ -16,9 +16,9 @@ export default function EarringsPage() {
     { id: 104, name: "Amethyst Majesty Jhumkas Earrings", price: 79, image: "/products/earring4.jpg" },
     { id: 105, name: "Amethyst Bloom Jhymkas Earrings", price: 99, image: "/products/earring5.jpg" },
     { id: 106, name: "Emerald Pearl Swing Earrings", price: 99, image: "/products/earring6.jpg" },
-     { id: 106, name: "Ruby Emerald Earrings", price: 129, image: "/products/earring7.jpg" },
-      { id: 106, name: "Floral Hoop Pearl Earrings", price: 149, image: "/products/earring8.jpg" },
-       { id: 106, name: "Vintage Royal Earrings", price: 179, image: "/products/earring9.jpg" },
+     { id: 107, name: "Ruby Emerald Earrings", price: 129, image: "/products/earring7.jpg" },
+      { id: 108, name: "Floral Hoop Pearl Earrings", price: 149, image: "/products/earring8.jpg" },
+       { id: 109, name: "Vintage Royal Earrings", price: 179, image: "/products/earring9.jpg" },
   ];
 
   return (
