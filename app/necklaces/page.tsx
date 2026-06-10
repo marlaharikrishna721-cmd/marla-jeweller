@@ -16,13 +16,13 @@ export default function NecklacesPage() {
     { id: 204, name: "Pearl Dew Drop Necklace", price: 129, image: "/products/necklace4.jpg" },
     { id: 205, name: "Royal Amethyst Necklace", price: 129, image: "/products/necklace5.jpg" },
     { id: 206, name: "Ruby Pistal Pendant Necklace", price: 149, image: "/products/necklace6.jpg" },
-    { id: 206, name: "Ruby Purple Pendant Necklace", price: 229, image: "/products/necklace7.jpg" },
-    { id: 206, name: "Ruby Red Pendant Necklace", price: 229, image: "/products/necklace8.jpg" },
-    { id: 206, name: "Ruby Green Pendant Necklace", price: 229, image: "/products/necklace9.jpg" },
-    { id: 206, name: "Ruby Blue Pendant Necklace", price: 149, image: "/products/necklace10.jpg" },
-    { id: 206, name: "Lakshmi Pendant Necklace", price: 249, image: "/products/necklace11.jpg" },
-    { id: 206, name: "Temple Grace Necklace", price: 199, image: "/products/necklace12.jpg" },
-    { id: 206, name: "Amethyst Royale Necklace", price: 299, image: "/products/necklace13.jpg" },
+    { id: 207, name: "Ruby Purple Pendant Necklace", price: 229, image: "/products/necklace7.jpg" },
+    { id: 208, name: "Ruby Red Pendant Necklace", price: 229, image: "/products/necklace8.jpg" },
+    { id: 209, name: "Ruby Green Pendant Necklace", price: 229, image: "/products/necklace9.jpg" },
+    { id: 210, name: "Ruby Blue Pendant Necklace", price: 149, image: "/products/necklace10.jpg" },
+    { id: 211, name: "Lakshmi Pendant Necklace", price: 249, image: "/products/necklace11.jpg" },
+    { id: 212, name: "Temple Grace Necklace", price: 199, image: "/products/necklace12.jpg" },
+    { id: 213, name: "Amethyst Royale Necklace", price: 299, image: "/products/necklace13.jpg" },
    
   ];
 
