@@ -10,10 +10,10 @@ export default function BraceletsPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const products = [
-    { id: 301, name: "Rose Gold Cristal Wave Bracelet", price: 119, image: "/products/bracelet1.jpg" ,inStock: true},
-    { id: 302, name: "Silver Spark Crystal Bracelet", price: 119, image: "/products/bracelet2.jpg" ,inStock: true},
-    { id: 303, name: "Cristal Clover Charm Bracelet", price: 149, image: "/products/bracelet3.jpg",inStock: true },
-    { id: 304, name: "Golden Sphere Bracelet", price: 169, image: "/products/bracelet4.jpg" ,inStock: true},
+    { id: 301, name: "Rose Gold Cristal Wave Bracelet", price: 119, image: "/products/bracelet1.jpg" },
+    { id: 302, name: "Silver Spark Crystal Bracelet", price: 119, image: "/products/bracelet2.jpg" },
+    { id: 303, name: "Cristal Clover Charm Bracelet", price: 149, image: "/products/bracelet3.jpg" },
+    { id: 304, name: "Golden Sphere Bracelet", price: 169, image: "/products/bracelet4.jpg" },
     
   ];
 

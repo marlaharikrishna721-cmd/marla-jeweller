@@ -10,12 +10,12 @@ export default function RingsPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const rings = [
-    { id: 1, name: "Twin Blossom Gam Stone Ring", price: 49, image: "/products/ring1.jpg",inStock: true},
-    { id: 2, name: "Ruby Blossom Vintage Ring", price: 59, image: "/products/ring2.jpg",inStock: true },
-    { id: 3, name: "Twisted Crystal Band Ring", price: 79, image: "/products/ring3.jpg",inStock: false },
-    { id: 4, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring4.jpg",inStock: true },
-    { id: 5, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring5.jpg",inStock: true },
-    { id: 6, name: "Regal Bloom Open Ring", price: 99, image: "/products/ring6.jpg" ,inStock: true},
+    { id: 1, name: "Twin Blossom Gam Stone Ring", price: 49, image: "/products/ring1.jpg" },
+    { id: 2, name: "Ruby Blossom Vintage Ring", price: 59, image: "/products/ring2.jpg" },
+    { id: 3, name: "Twisted Crystal Band Ring", price: 79, image: "/products/ring3.jpg" },
+    { id: 4, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring4.jpg" },
+    { id: 5, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring5.jpg" },
+    { id: 6, name: "Regal Bloom Open Ring", price: 99, image: "/products/ring6.jpg" },
   ];
 
   return (
