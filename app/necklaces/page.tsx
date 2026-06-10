@@ -10,19 +10,19 @@ export default function NecklacesPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const necklaces = [
-    { id: 201, name: "Golden Bead Classic Chain", price: 49, image: "/products/necklace1.jpg" },
-    { id: 202, name: "Ruby Blossom Choker Necklace", price: 129, image: "/products/necklace2.jpg" },
-    { id: 203, name: "Ruby Minimal Choker Necklace", price: 129, image: "/products/necklace3.jpg" },
-    { id: 204, name: "Pearl Dew Drop Necklace", price: 129, image: "/products/necklace4.jpg" },
-    { id: 205, name: "Royal Amethyst Necklace", price: 129, image: "/products/necklace5.jpg" },
-    { id: 206, name: "Ruby Pistal Pendant Necklace", price: 149, image: "/products/necklace6.jpg" },
-    { id: 206, name: "Ruby Purple Pendant Necklace", price: 229, image: "/products/necklace7.jpg" },
-    { id: 206, name: "Ruby Red Pendant Necklace", price: 229, image: "/products/necklace8.jpg" },
-    { id: 206, name: "Ruby Green Pendant Necklace", price: 229, image: "/products/necklace9.jpg" },
-    { id: 206, name: "Ruby Blue Pendant Necklace", price: 149, image: "/products/necklace10.jpg" },
-    { id: 206, name: "Lakshmi Pendant Necklace", price: 249, image: "/products/necklace11.jpg" },
-    { id: 206, name: "Temple Grace Necklace", price: 199, image: "/products/necklace12.jpg" },
-    { id: 206, name: "Amethyst Royale Necklace", price: 299, image: "/products/necklace13.jpg" },
+    { id: 201, name: "Golden Bead Classic Chain", price: 49, image: "/products/necklace1.jpg",inStock: true },
+    { id: 202, name: "Ruby Blossom Choker Necklace", price: 129, image: "/products/necklace2.jpg",inStock: true },
+    { id: 203, name: "Ruby Minimal Choker Necklace", price: 129, image: "/products/necklace3.jpg",inStock: false },
+    { id: 204, name: "Pearl Dew Drop Necklace", price: 129, image: "/products/necklace4.jpg",inStock: false },
+    { id: 205, name: "Royal Amethyst Necklace", price: 129, image: "/products/necklace5.jpg",inStock: true },
+    { id: 206, name: "Ruby Pistal Pendant Necklace", price: 149, image: "/products/necklace6.jpg",inStock: true },
+    { id: 206, name: "Ruby Purple Pendant Necklace", price: 229, image: "/products/necklace7.jpg",inStock: true },
+    { id: 206, name: "Ruby Red Pendant Necklace", price: 229, image: "/products/necklace8.jpg",inStock: true },
+    { id: 206, name: "Ruby Green Pendant Necklace", price: 229, image: "/products/necklace9.jpg",inStock: true },
+    { id: 206, name: "Ruby Blue Pendant Necklace", price: 149, image: "/products/necklace10.jpg",inStock: true },
+    { id: 206, name: "Lakshmi Pendant Necklace", price: 249, image: "/products/necklace11.jpg",inStock: true },
+    { id: 206, name: "Temple Grace Necklace", price: 199, image: "/products/necklace12.jpg",inStock: true },
+    { id: 206, name: "Amethyst Royale Necklace", price: 299, image: "/products/necklace13.jpg",inStock: true },
    
   ];
 

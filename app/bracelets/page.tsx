@@ -10,10 +10,10 @@ export default function BraceletsPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const products = [
-    { id: 301, name: "Rose Gold Cristal Wave Bracelet", price: 119, image: "/products/bracelet1.jpg" },
-    { id: 302, name: "Silver Spark Crystal Bracelet", price: 119, image: "/products/bracelet2.jpg" },
-    { id: 303, name: "Cristal Clover Charm Bracelet", price: 149, image: "/products/bracelet3.jpg" },
-    { id: 304, name: "Golden Sphere Bracelet", price: 169, image: "/products/bracelet4.jpg" },
+    { id: 301, name: "Rose Gold Cristal Wave Bracelet", price: 119, image: "/products/bracelet1.jpg" ,inStock: true},
+    { id: 302, name: "Silver Spark Crystal Bracelet", price: 119, image: "/products/bracelet2.jpg" ,inStock: true},
+    { id: 303, name: "Cristal Clover Charm Bracelet", price: 149, image: "/products/bracelet3.jpg",inStock: true },
+    { id: 304, name: "Golden Sphere Bracelet", price: 169, image: "/products/bracelet4.jpg" ,inStock: true},
     
   ];
 
@@ -54,12 +54,21 @@ export default function BraceletsPage() {
                 <p className="text-2xl font-bold mt-2 text-yellow-100">₹{item.price}</p>
 
                 <div className="flex gap-2 mt-4">
-                  <button
-                    onClick={() => addToCart(item)}
-                    className="bg-black border border-yellow-600 text-white px-4 py-2 rounded w-full font-bold"
-                  >
-                    Add To Cart
-                  </button>
+                  {item.inStock ? (
+  <button
+    onClick={() => addToCart(item)}
+    className="bg-black text-white px-4 py-2 rounded w-full"
+  >
+    Add To Cart
+  </button>
+) : (
+  <button
+    disabled
+    className="bg-gray-400 text-white px-4 py-2 rounded w-full cursor-not-allowed"
+  >
+    Out Of Stock
+  </button>
+)}
 
                   <button
                     onClick={() => {

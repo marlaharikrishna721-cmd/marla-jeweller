@@ -10,15 +10,15 @@ export default function EarringsPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const earrings = [
-    { id: 101, name: "Silver Blossom Hoop Drop Earrings", price: 49, image: "/products/earring1.jpg" },
-    { id: 102, name: "Midnight Crystal Gold Drop Earrings", price: 49, image: "/products/earring2.jpg" },
-    { id: 103, name: "Midnight Crystal Black DropEarrings", price: 49, image: "/products/earring3.jpg" },
-    { id: 104, name: "Amethyst Majesty Jhumkas Earrings", price: 79, image: "/products/earring4.jpg" },
-    { id: 105, name: "Amethyst Bloom Jhymkas Earrings", price: 119, image: "/products/earring5.jpg" },
-    { id: 106, name: "Emerald Pearl Swing Earrings", price: 119, image: "/products/earring6.jpg" },
-     { id: 107, name: "Ruby Emerald Earrings", price: 179, image: "/products/earring7.jpg" },
-      { id: 108, name: "Floral Hoop Pearl Earrings", price: 179, image: "/products/earring8.jpg" },
-       { id: 109, name: "Vintage Royal Earrings", price: 179, image: "/products/earring9.jpg" },
+    { id: 101, name: "Silver Blossom Hoop Drop Earrings", price: 49, image: "/products/earring1.jpg" ,inStock: true},
+    { id: 102, name: "Midnight Crystal Gold Drop Earrings", price: 49, image: "/products/earring2.jpg",inStock: true },
+    { id: 103, name: "Midnight Crystal Black DropEarrings", price: 49, image: "/products/earring3.jpg",inStock: true },
+    { id: 104, name: "Amethyst Majesty Jhumkas Earrings", price: 79, image: "/products/earring4.jpg",inStock: true},
+    { id: 105, name: "Amethyst Bloom Jhymkas Earrings", price: 119, image: "/products/earring5.jpg" ,inStock: true},
+    { id: 106, name: "Emerald Pearl Swing Earrings", price: 119, image: "/products/earring6.jpg",inStock: true },
+     { id: 107, name: "Ruby Emerald Earrings", price: 179, image: "/products/earring7.jpg",inStock: true },
+      { id: 108, name: "Floral Hoop Pearl Earrings", price: 179, image: "/products/earring8.jpg",inStock: true },
+       { id: 109, name: "Vintage Royal Earrings", price: 179, image: "/products/earring9.jpg",inStock: true },
   ];
 
   return (
