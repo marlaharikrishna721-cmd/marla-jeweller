@@ -10,27 +10,26 @@ export default function NecklacesPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const necklaces = [
-    { id: 201, name: "Golden Bead Classic Chain", price: 49, image: "/products/necklace1.jpg" },
-    { id: 202, name: "Ruby Blossom Choker Necklace", price: 129, image: "/products/necklace2.jpg" },
-    { id: 203, name: "Ruby Minimal Choker Necklace", price: 129, image: "/products/necklace3.jpg" },
-    { id: 204, name: "Pearl Dew Drop Necklace", price: 129, image: "/products/necklace4.jpg" },
-    { id: 205, name: "Royal Amethyst Necklace", price: 129, image: "/products/necklace5.jpg" },
-    { id: 206, name: "Ruby Pistal Pendant Necklace", price: 149, image: "/products/necklace6.jpg" },
-    { id: 207, name: "Ruby Purple Pendant Necklace", price: 229, image: "/products/necklace7.jpg" },
-    { id: 208, name: "Ruby Red Pendant Necklace", price: 229, image: "/products/necklace8.jpg" },
-    { id: 209, name: "Ruby Green Pendant Necklace", price: 229, image: "/products/necklace9.jpg" },
-    { id: 210, name: "Ruby Blue Pendant Necklace", price: 149, image: "/products/necklace10.jpg" },
-    { id: 211, name: "Lakshmi Pendant Necklace", price: 249, image: "/products/necklace11.jpg" },
-    { id: 212, name: "Temple Grace Necklace", price: 199, image: "/products/necklace12.jpg" },
-    { id: 213, name: "Amethyst Royale Necklace", price: 299, image: "/products/necklace13.jpg" },
-   
+    { id: 201, name: "Golden Bead Classic Chain", price: 49, image: "/products/necklace1.jpg", inStock: false },
+    { id: 202, name: "Ruby Blossom Choker Necklace", price: 129, image: "/products/necklace2.jpg", inStock: true },
+    { id: 203, name: "Ruby Minimal Choker Necklace", price: 129, image: "/products/necklace3.jpg", inStock: true },
+    { id: 204, name: "Pearl Dew Drop Necklace", price: 129, image: "/products/necklace4.jpg", inStock: true },
+    { id: 205, name: "Royal Amethyst Necklace", price: 129, image: "/products/necklace5.jpg", inStock: true },
+    { id: 206, name: "Ruby Pistal Pendant Necklace", price: 149, image: "/products/necklace6.jpg", inStock: true },
+    { id: 207, name: "Ruby Purple Pendant Necklace", price: 229, image: "/products/necklace7.jpg", inStock: true },
+    { id: 208, name: "Ruby Red Pendant Necklace", price: 229, image: "/products/necklace8.jpg", inStock: true },
+    { id: 209, name: "Ruby Green Pendant Necklace", price: 229, image: "/products/necklace9.jpg", inStock: true },
+    { id: 210, name: "Ruby Blue Pendant Necklace", price: 149, image: "/products/necklace10.jpg", inStock: true },
+    { id: 211, name: "Lakshmi Pendant Necklace", price: 249, image: "/products/necklace11.jpg", inStock: true },
+    { id: 212, name: "Temple Grace Necklace", price: 199, image: "/products/necklace12.jpg", inStock: true },
+    { id: 213, name: "Amethyst Royale Necklace", price: 299, image: "/products/necklace13.jpg", inStock: true },
   ];
 
   return (
     <main className="min-h-screen luxury-bg text-white">
       <header className="bg-black border-b border-yellow-600 p-4 flex justify-between items-center sticky top-0 z-50">
         <Link href="/" className="font-bold text-xl gold-text">
-           MAYRA Timeless Elegance
+          MAYRA Timeless Elegance
         </Link>
 
         <Link href="/cart" className="gold-button px-4 py-2 rounded-full font-bold">
@@ -64,22 +63,32 @@ export default function NecklacesPage() {
 
                 <div className="flex gap-2 mt-4">
                   <button
-                    onClick={() => addToCart(item)}
-                    className="bg-black border border-yellow-600 text-white px-4 py-2 rounded w-full font-bold"
+                    onClick={() => item.inStock && addToCart(item)}
+                    disabled={!item.inStock}
+                    className="bg-black border border-yellow-600 text-white px-4 py-2 rounded w-full font-bold disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Add To Cart
                   </button>
 
                   <button
                     onClick={() => {
-                      addToCart(item);
-                      window.location.href = "/cart";
+                      if (item.inStock) {
+                        addToCart(item);
+                        window.location.href = "/cart";
+                      }
                     }}
-                    className="gold-button px-4 py-2 rounded w-full"
+                    disabled={!item.inStock}
+                    className="gold-button px-4 py-2 rounded w-full disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Buy Now
                   </button>
                 </div>
+
+                {!item.inStock && (
+                  <p className="text-red-500 font-bold text-center mt-3 text-lg">
+                    ❌ Out of Stock
+                  </p>
+                )}
               </div>
             </div>
           ))}

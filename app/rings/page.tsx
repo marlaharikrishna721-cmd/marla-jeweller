@@ -10,19 +10,19 @@ export default function RingsPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const rings = [
-    { id: 1, name: "Twin Blossom Gam Stone Ring", price: 49, image: "/products/ring1.jpg" },
-    { id: 2, name: "Ruby Blossom Vintage Ring", price: 59, image: "/products/ring2.jpg" },
-    { id: 3, name: "Twisted Crystal Band Ring", price: 79, image: "/products/ring3.jpg" },
-    { id: 4, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring4.jpg" },
-    { id: 5, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring5.jpg" },
-    { id: 6, name: "Regal Bloom Open Ring", price: 99, image: "/products/ring6.jpg" },
+    { id: 1, name: "Twin Blossom Gam Stone Ring", price: 49, image: "/products/ring1.jpg", inStock: false },
+    { id: 2, name: "Ruby Blossom Vintage Ring", price: 59, image: "/products/ring2.jpg", inStock: true },
+    { id: 3, name: "Twisted Crystal Band Ring", price: 79, image: "/products/ring3.jpg", inStock: true },
+    { id: 4, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring4.jpg", inStock: true },
+    { id: 5, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring5.jpg", inStock: true },
+    { id: 6, name: "Regal Bloom Open Ring", price: 99, image: "/products/ring6.jpg", inStock: true },
   ];
 
   return (
     <main className="min-h-screen luxury-bg text-white">
       <header className="bg-black border-b border-yellow-600 p-4 flex justify-between items-center sticky top-0 z-50">
         <Link href="/" className="font-bold text-xl gold-text">
-           MAYRA Timeless Elegance
+          MAYRA Timeless Elegance
         </Link>
 
         <Link href="/cart" className="gold-button px-4 py-2 rounded-full font-bold">
@@ -52,26 +52,39 @@ export default function RingsPage() {
 
               <div className="p-5">
                 <h2 className="font-bold text-xl gold-text">{item.name}</h2>
-                <p className="text-2xl font-bold mt-2 text-yellow-100">₹{item.price}</p>
+
+                <p className="text-2xl font-bold mt-2 text-yellow-100">
+                  ₹{item.price}
+                </p>
 
                 <div className="flex gap-2 mt-4">
                   <button
-                    onClick={() => addToCart(item)}
-                    className="bg-black border border-yellow-600 text-white px-4 py-2 rounded w-full font-bold"
+                    onClick={() => item.inStock && addToCart(item)}
+                    disabled={!item.inStock}
+                    className="bg-black border border-yellow-600 text-white px-4 py-2 rounded w-full font-bold disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Add To Cart
                   </button>
 
                   <button
                     onClick={() => {
-                      addToCart(item);
-                      window.location.href = "/cart";
+                      if (item.inStock) {
+                        addToCart(item);
+                        window.location.href = "/cart";
+                      }
                     }}
-                    className="gold-button px-4 py-2 rounded w-full"
+                    disabled={!item.inStock}
+                    className="gold-button px-4 py-2 rounded w-full disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Buy Now
                   </button>
                 </div>
+
+                {!item.inStock && (
+                  <p className="text-red-500 font-bold text-center mt-3 text-lg">
+                    ❌ Out of Stock
+                  </p>
+                )}
               </div>
             </div>
           ))}
