@@ -15,7 +15,7 @@ export default function EarringsPage() {
       name: "Silver Blossom Hoop Drop Earrings",
       price: 49,
       image: "/products/earring1.jpg",
-      inStock: false,
+      inStock: true,
     },
     {
       id: 102,

@@ -10,10 +10,10 @@ export default function NecklacesPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const necklaces = [
-    { id: 201, name: "Golden Bead Classic Chain", price: 49, image: "/products/necklace1.jpg", inStock: false },
+    { id: 201, name: "Golden Bead Classic Chain", price: 49, image: "/products/necklace1.jpg", inStock: true },
     { id: 202, name: "Ruby Blossom Choker Necklace", price: 129, image: "/products/necklace2.jpg", inStock: true },
-    { id: 203, name: "Ruby Minimal Choker Necklace", price: 129, image: "/products/necklace3.jpg", inStock: true },
-    { id: 204, name: "Pearl Dew Drop Necklace", price: 129, image: "/products/necklace4.jpg", inStock: true },
+    { id: 203, name: "Ruby Minimal Choker Necklace", price: 129, image: "/products/necklace3.jpg", inStock: false },
+    { id: 204, name: "Pearl Dew Drop Necklace", price: 129, image: "/products/necklace4.jpg", inStock: false },
     { id: 205, name: "Royal Amethyst Necklace", price: 129, image: "/products/necklace5.jpg", inStock: true },
     { id: 206, name: "Ruby Pistal Pendant Necklace", price: 149, image: "/products/necklace6.jpg", inStock: true },
     { id: 207, name: "Ruby Purple Pendant Necklace", price: 229, image: "/products/necklace7.jpg", inStock: true },

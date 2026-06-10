@@ -10,7 +10,7 @@ export default function RingsPage() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const rings = [
-    { id: 1, name: "Twin Blossom Gam Stone Ring", price: 49, image: "/products/ring1.jpg", inStock: false },
+    { id: 1, name: "Twin Blossom Gam Stone Ring", price: 49, image: "/products/ring1.jpg", inStock: true },
     { id: 2, name: "Ruby Blossom Vintage Ring", price: 59, image: "/products/ring2.jpg", inStock: true },
     { id: 3, name: "Twisted Crystal Band Ring", price: 79, image: "/products/ring3.jpg", inStock: true },
     { id: 4, name: "Golden Halo Leaf Ring", price: 79, image: "/products/ring4.jpg", inStock: true },
