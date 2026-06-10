@@ -11,7 +11,7 @@ export default function NecklacesPage() {
 
   const necklaces = [
     { id: 201, name: "Golden Bead Classic Chain", price: 49, image: "/products/necklace1.jpg" },
-    { id: 202, name: "Ruby Blossom Choker Necklace", price: 119, image: "/products/necklace2.jpg" },
+    { id: 202, name: "Ruby Blossom Choker Necklace", price: 129, image: "/products/necklace2.jpg" },
     { id: 203, name: "Ruby Minimal Choker Necklace", price: 129, image: "/products/necklace3.jpg" },
     { id: 204, name: "Pearl Dew Drop Necklace", price: 129, image: "/products/necklace4.jpg" },
     { id: 205, name: "Royal Amethyst Necklace", price: 129, image: "/products/necklace5.jpg" },
